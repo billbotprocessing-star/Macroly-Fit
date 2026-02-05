@@ -1,49 +1,39 @@
-# Macroly Fit (MacroTracker)
+# Macroly Fit (MacroTracker) 🤖
 
-### **The Execution-First Nutrition System**
-*Turning fitness goals into daily decisions through automated planning, purchasing, and verified accuracy.*
-
----
-
-## The Vision
-Most nutrition apps fail because they are **tracking-first**, requiring high willpower and exhaustive manual data entry. **Macroly Fit** is **execution-first**. 
-
-Instead of asking *"What did you eat?"*, we answer *"What should you buy and eat right now?"* by bridging the gap between a macro goal and a digital grocery cart. It is built for the busy professional (25–45) who wants body recomposition results without the administrative overhead of traditional calorie counting.
+### **The AI-Agentic Nutrition Logistics Engine**
+*An execution-first system powered by n8n orchestration, OpenAI intelligence, and Claude-driven interfaces.*
 
 ---
 
-## Core Pillars & Features
-
-### Plan-to-Purchase Workflow
-* **Auto-Planning:** Converts goals (Fat Loss, Recomposition, Endurance) into weekly meal plans with macro/micro guardrails.
-* **Cart Automation:** Automatically builds grocery lists and populates retailer carts (Instacart, Walmart, etc.) based on your plan.
-* **Smart Substitutions:** AI-driven swaps based on dietary preferences, allergies, and real-time budget constraints.
-
-### The Accuracy Layer
-* **Confidence Scoring:** Every log includes a confidence score. If the AI is uncertain about a portion size, it prompts the user for clarification—preventing "garbage-in, garbage-out" data.
-* **Verified Database:** Curated nutrition data for the top 5,000 most-purchased grocery items and major restaurant chains.
-
-### Progress Ops (Dynamic Adjustment)
-* **Closed-Loop Feedback:** Weekly check-ins adjust targets based on *actual* weight trends, training load, and adherence, rather than relying on static BMR equations.
-* **Hybrid Logging:** Frictionless entry via **Photo**, **Voice**, or **Manual** logging with AI-assisted portion estimation.
+## 🚀 The Agentic Vision
+Macroly Fit isn't a traditional app; it's a **coordinated swarm of AI agents**. By leveraging **n8n** as the orchestrator, we bypass traditional backend constraints to build a "Logistics Engine" that handles the friction of meal planning and grocery purchasing automatically.
 
 ---
 
-## Repository Structure
+## 🛠 The "Agentic" Stack
 
-This project follows a **Feature-Based Architecture** to support scalability and domain isolation.
+| Role | Technology | Responsibility |
+| :--- | :--- | :--- |
+| **Orchestrator** | **n8n** | The "Brain." Connects APIs, manages state, and triggers workflows. |
+| **Logic Engine** | **OpenAI 5.2 (o-series)** | Complex reasoning: Goal-to-Macro conversion and Accuracy validation. |
+| **UI / UX** | **Claude 3.5 Sonnet** | Generates the frontend code dynamically and handles complex human-like check-ins. |
+| **Database** | **Supabase / Airtable** | Persistent storage for user logs, weight trends, and verified food items. |
+| **Integrations** | **n8n Nodes** | Direct connections to Instacart API, Google Vision (for logging), and WhatsApp/Telegram. |
+
+---
+
+## 📂 System Architecture
 
 ```text
-macroly-fit/
-├── src/
-│   ├── components/         # Atomic UI (Button, Input, Card)
-│   ├── features/           # Domain-specific logic
-│   │   ├── dashboard/      # Daily meal plans & logging UI
-│   │   ├── grocery/        # Cart automation & Retailer APIs
-│   │   └── progress/       # Weight trends & check-in logic
-│   ├── hooks/              # Global hooks (useMacros, useAuth)
-│   ├── services/           # External API wrappers (AI, Instacart)
-│   ├── store/              # State management (Zustand/Context)
-│   └── utils/              # Macro formulas & accuracy logic
-├── tailwind.config.js      # Design system configuration
-└── vite.config.js          # Build tool configuration
+macroly-fit-agent/
+├── n8n-workflows/          # JSON exports of the "Neural" logic
+│   ├── wf_goal_planning.json
+│   ├── wf_grocery_sync.json
+│   └── wf_ai_logging_v5.json
+├── frontend-claude/        # Claude-generated React/Tailwind views
+│   ├── Dashboard.jsx
+│   └── GroceryCart.jsx
+├── prompts/                # System prompts for OpenAI & Claude
+│   ├── nutrition_specialist.md
+│   └── code_architect.md
+└── docker-compose.yml      # Self-hosting setup for n8n/Postgres
