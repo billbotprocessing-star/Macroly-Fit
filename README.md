@@ -14,7 +14,7 @@ Instead of asking *"What did you eat?"*, we answer *"What should you buy and eat
 
 ## Core Pillars & Features
 
-### 🛒 Plan-to-Purchase Workflow
+### Plan-to-Purchase Workflow
 * **Auto-Planning:** Converts goals (Fat Loss, Recomposition, Endurance) into weekly meal plans with macro/micro guardrails.
 * **Cart Automation:** Automatically builds grocery lists and populates retailer carts (Instacart, Walmart, etc.) based on your plan.
 * **Smart Substitutions:** AI-driven swaps based on dietary preferences, allergies, and real-time budget constraints.
